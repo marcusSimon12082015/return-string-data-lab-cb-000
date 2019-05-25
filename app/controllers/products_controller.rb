@@ -19,7 +19,6 @@ class ProductsController < ApplicationController
   end
 
   def description
-    pry
     render plain: @product.description.nil? ? "" : @product.description
   end
 
