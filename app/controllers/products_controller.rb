@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product,:only[:inventory]
+
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -23,3 +24,4 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name,:price,:inventory,:description)
   end
 end
+ 
