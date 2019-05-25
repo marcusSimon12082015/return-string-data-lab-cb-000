@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def create
+    pry
     @product = Product.new(product_params)
     if @product.save
       redirect_to products_path
