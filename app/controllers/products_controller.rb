@@ -19,7 +19,11 @@ class ProductsController < ApplicationController
   end
 
   def description
-    render plain: @product.description.nil? ? "" : @product.description
+    if @product.description.nil?
+      render plain: ""
+    else 
+      render plain: @product.description
+    end 
   end
 
   private
