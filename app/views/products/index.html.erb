@@ -12,14 +12,14 @@
 $(function () {
   $(".more-info").on('click', function(e) {
     e.preventDefault();
-    var $id = $(this).data("id");
-    $.get("/products/" + $id + "/description", function(data) {
+    var id = $(this).data("id");
+    $.get("/products/" + id + "/description", function(data) {
       if (data != "No") {
         $(".description-info-"+id).text(data);
       }
     });
 
-    $.get("/products/" + $id + "/inventory", function(data) {
+    $.get("/products/" + id + "/inventory", function(data) {
       if (data == "true") {
         $(".inventory-info-"+id).text("Available");
       } else {
