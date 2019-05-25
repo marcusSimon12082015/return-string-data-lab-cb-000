@@ -2,6 +2,9 @@
 <% @products.each do |product| %>
   <p><%=product.name %></p>
   <p><button class="more-info" data-id="<%=product.id%>">More Info</button></p>
+  <div class="info-style">
+    
+  </div>
 <% end %>
 <script type="text/javascript" charset="utf-8">
 $(function () {
