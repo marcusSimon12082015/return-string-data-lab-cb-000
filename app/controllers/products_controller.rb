@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only:[:inventory]
+  before_action :set_product, only:[:inventory,:description]
 
   def create
     @product = Product.new(product_params)
