@@ -13,12 +13,10 @@ $(function () {
     e.preventDefault();
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      debugger;
       $(".description-info").text(data);
     });
 
     $.get("/products/" + id + "/inventory", function(data) {
-      debugger;
       if (data == "true") {
         $(".inventory-info").text("Available");
       } else {
