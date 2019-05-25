@@ -21,9 +21,9 @@ class ProductsController < ApplicationController
   def description
     if @product.description.nil?
       render plain: ""
-    else 
+    else
       render plain: @product.description
-    end 
+    end
   end
 
   private
