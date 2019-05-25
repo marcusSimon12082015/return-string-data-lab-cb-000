@@ -1,6 +1,5 @@
 <h1>Products list</h1>
 <% @products.each do |product| %>
   <p><%=product.name %></p>
-  <p><%=product.name %></p>
-  <p><%=product.name %></p>
+  <p><%=button_to "More Info",[:description,product] %></p>
 <% end %>
