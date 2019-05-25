@@ -15,6 +15,15 @@ $(function () {
     $.get("/products/" + id + "/description", function(data) {
       $(".description-info").text(data);
     });
+
+    $.get("/products/" + id + "/inventory", function(data) {
+      if (data == "true") {
+        $(".inventory-info").text("Available");
+      } else {
+        $(".inventory-info").text("Sold Out");
+      }
+    });
+
   });
 });
 </script>
