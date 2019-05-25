@@ -14,7 +14,9 @@ $(function () {
     let id = $(this).data("id");
     debugger;
     $.get("/products/" + id + "/description", function(data) {
-      $(".description-info-"+id).text(data);
+      if (data != "No") {
+        $(".description-info-"+id).text(data);
+      }
     });
 
     $.get("/products/" + id + "/inventory", function(data) {
