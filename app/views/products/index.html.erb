@@ -1,5 +1,16 @@
 <h1>Products list</h1>
 <% @products.each do |product| %>
   <p><%=product.name %></p>
-  <p><%=button_to "More Info",[:description,product] %></p>
+  <p><%=button_to "More Info",[:description,product],class:'more-info' %></p>
 <% end %>
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".js-more").on('click', function() {
+    // get the id from the data attribute
+    let id = $(this).data("id");
+    $.get("/posts/" + id + "/body", function(data) {
+      alert(data);
+    });
+  });
+});
+</script>
