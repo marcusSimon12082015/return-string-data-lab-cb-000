@@ -13,7 +13,7 @@ $(function () {
     // get the id from the data attribute
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      alert(data);
+      $(".description-info").text(data);
     });
   });
 });
