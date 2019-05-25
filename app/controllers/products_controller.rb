@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
   end
 
   def description
-    pry
+    @product = Product.find(params[:id])
     if @product.description.nil?
       render plain: "No"
     else
