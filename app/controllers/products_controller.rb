@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
 
-  def create 
+  def create
 
   end
 
-  private 
-  def product_params 
+  private
+  def product_params
     params.require(:product).permit(:name,:price,:inventory,:description)
-  end 
+  end
 end
