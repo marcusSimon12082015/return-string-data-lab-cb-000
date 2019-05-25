@@ -9,7 +9,8 @@
 <% end %>
 <script type="text/javascript" charset="utf-8">
 $(function () {
-  $(".more-info").on('click', function() {
+  $(".more-info").on('click', function(e) {
+    e.preventDefault();
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
       $(".description-info").text(data);
