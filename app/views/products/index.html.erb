@@ -16,6 +16,8 @@ $(function () {
     $.get("/products/" + id + "/description", function(data) {
       if (data != "No") {
         $(".description-info-"+id).text(data);
+      }else{
+        $(".description-info-"+id).text("This is: "+data);
       }
     });
 
