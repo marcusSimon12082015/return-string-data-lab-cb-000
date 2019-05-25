@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    pry
+    render plain: @post.inventory > 0 ? "true" : "false"
   end
 
   private
@@ -24,4 +24,3 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name,:price,:inventory,:description)
   end
 end
- 
