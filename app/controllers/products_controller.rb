@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
   end
 
   def description
+    @product = Product.create!(name: "Test Product", inventory: 0, description: "This is a test description with more text than should be there.")
     if @product.description.nil?
       render plain: "No"
     else
