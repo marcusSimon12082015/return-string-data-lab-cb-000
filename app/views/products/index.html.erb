@@ -1,7 +1,7 @@
 <h1>Products list</h1>
 <% @products.each do |product| %>
   <p><%=product.name %></p>
-  <p><%=button_to "More Info",[:description,product],class:'more-info' %></p>
+  <p><button class="more-info" data-id="<%=product.id%>">More Info</button></p>
 <% end %>
 <script type="text/javascript" charset="utf-8">
 $(function () {
