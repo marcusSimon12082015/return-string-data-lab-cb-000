@@ -13,7 +13,6 @@ $(function () {
     e.preventDefault();
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      debugger;
       $(".description-info-"+id).text(data);
     });
 
