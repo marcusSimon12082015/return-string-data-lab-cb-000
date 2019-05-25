@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
 
   def description
     pry
-    render plain: @product.description
+    render plain: @product.description.nil? ? "" : @product.description
   end
 
   private
