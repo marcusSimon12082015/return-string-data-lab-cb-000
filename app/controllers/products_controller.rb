@@ -9,9 +9,9 @@ class ProductsController < ApplicationController
     end
   end
 
-  def inventory 
+  def inventory
     pry
-  end 
+  end
   private
   def product_params
     params.require(:product).permit(:name,:price,:inventory,:description)
