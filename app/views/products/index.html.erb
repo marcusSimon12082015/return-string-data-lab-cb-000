@@ -10,8 +10,8 @@
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".more-info").on('click', function() {
-    // get the id from the data attribute
     let id = $(this).data("id");
+    debugger
     $.get("/products/" + id + "/description", function(data) {
       $(".description-info").text(data);
     });
