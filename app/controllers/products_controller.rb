@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only:[:inventory,:description]
 
-  def index 
+  def index
     @products = Product.all
   end
-   
+
   def create
     @product = Product.new(product_params)
     if @product.save
