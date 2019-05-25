@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
 
   def description
     if @product.description.nil?
-      render plain: ""
+      render plain: "No"
     else
       render plain: @product.description
     end
