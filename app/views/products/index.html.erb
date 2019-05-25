@@ -13,14 +13,14 @@ $(function () {
     e.preventDefault();
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      $(".description-info").text(data);
+      $(".description-info-"+id).text(data);
     });
 
     $.get("/products/" + id + "/inventory", function(data) {
       if (data == "true") {
-        $(".inventory-info").text("Available");
+        $(".inventory-info-"+id).text("Available");
       } else {
-        $(".inventory-info").text("Sold Out");
+        $(".inventory-info-"+id).text("Sold Out");
       }
     });
 
