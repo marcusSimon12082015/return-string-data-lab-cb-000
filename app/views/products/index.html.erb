@@ -11,6 +11,7 @@
 $(function () {
   $(".more-info").on('click', function(e) {
     e.preventDefault();
+    debugger;
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
       $(".description-info").text(data);
